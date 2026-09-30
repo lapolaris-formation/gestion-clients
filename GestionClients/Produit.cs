@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GestionClients
+{
+    public class Produit
+    {
+        public string Reference { get; }
+        public string Nom { get; }
+        public double Prix { get; }
+        public string Categorie { get; }
+        public int Stock { get; }
+        public double PrixTTC { get; }
+        public double PrixHT { get; }
+
+
+
+        public Produit(string reference, string nom, double prix, string categorie, int stock)
+        {
+
+            if (string.IsNullOrWhiteSpace(nom)) throw new ArgumentException("Le nom est obligatoire.");
+            if (string.IsNullOrWhiteSpace(categorie)) throw new ArgumentException("La categorie est obligatoire.");
+            Reference = reference;
+            Nom = nom
+            Prix = prix;
+            Categorie = categorie;
+            Stock = prix;
+        }
+    }
+}
