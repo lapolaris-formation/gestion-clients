@@ -1,3 +1,4 @@
 // See https://aka.ms/new-console-template for more information
-var prenom = "";
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Entrez votre prénom :");
+var prenom = Console.ReadLine();
+Console.WriteLine($"Hello, {prenom}");
